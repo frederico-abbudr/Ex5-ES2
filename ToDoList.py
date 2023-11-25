@@ -24,6 +24,7 @@ class ToDoList:
 
 def main():
     lista_de_tarefas = ToDoList()
+    # Por se tratar de um sistema simples, ele não faz uso de interface gráfica
 
     while True:
         print('\n===== Gerenciador de Tarefas =====')
