@@ -1,31 +1,17 @@
-name: Testes
+name: Sistema ToDo list 
 
-on: [push, pull_request]
+on: [push]
 
 jobs:
-  testes:
-    runs-on: ${{ matrix.os }}
-
+  build:
     strategy:
-      matrix:
-        os:
-          - ubuntu-20.04
-          - macos-10.15
-          - windows-2019
-        python-version: [3.10]
-
+        matrix:
+          os: [macos-latest, ubuntu-latest, windows-latest]
+  
+    runs-on: ${{ matrix.os }}
     steps:
-    - name: Checkout do repositório
-      uses: actions/checkout@v2.4.2
-
-    - name: Configurar Python
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ matrix.python-version }}
-
-    - name: Instalar dependências
-      run: |
-        python -m pip install --upgrade pip
-
-    - name: Executar testes
-      run: python -m unittest discover -s . -p '*_test.py'
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - run: python -m unittest ToDoList_test.py
