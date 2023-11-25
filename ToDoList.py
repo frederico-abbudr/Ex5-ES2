@@ -38,7 +38,7 @@ def main():
         if escolha == '1': 
             tarefa = input('Digite a tarefa: ')
             lista_de_tarefas.adicionar_tarefa(tarefa)
-        elif escolha == '2':
+        elif escolha == '2': 
             lista_de_tarefas.listar_tarefas()
         elif escolha == '3':
             indice = int(input('Digite o índice da tarefa a ser removida: '))
