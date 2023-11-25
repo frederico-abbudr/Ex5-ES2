@@ -35,7 +35,7 @@ def main():
 
         escolha = input('Escolha uma opção (1/2/3/4): ')
 
-        if escolha == '1':
+        if escolha == '1': 
             tarefa = input('Digite a tarefa: ')
             lista_de_tarefas.adicionar_tarefa(tarefa)
         elif escolha == '2':
