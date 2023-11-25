@@ -1,4 +1,5 @@
 class ToDoList:
+    # Código que monta uma lista de tarefas a se fazer
     def __init__(self):
         self.tarefas = []
 
